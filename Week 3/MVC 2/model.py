@@ -1,5 +1,7 @@
 from random import randrange
 import json
+import bcrypt
+import base64
 
 acc_start = 100000000 # to generate account number for every user
 acc_end = 1000000000
@@ -13,6 +15,7 @@ class account:
 
     @classmethod
     def create_acc(cls, username, password):
+        status = True
         acc_no = randrange(acc_start,acc_end)
         with open('data/bank.json','r') as file:
             data = json.load(file)
@@ -20,12 +23,12 @@ class account:
             acc_no = randrange(acc_start,acc_end)
         acc = account(acc_no, username, password)
         acc.save()
-        return acc
+        return status,acc
 
     def save(self):
         with open('data/bank.json','r') as file:
             data = json.load(file) #json to dict
-        data[self.acc_no] = {'username':self.username, 'password':self.password, 'balance':self.balance}
+        data[self.acc_no] = {'username':self.username, 'password':base64.b64encode(bcrypt.hashpw(self.password.encode(), bcrypt.gensalt())).decode(), 'balance':self.balance} #base64.b64encode(bcrypt.hashpw(self.password.encode(), bcrypt.gensalt())).decode()
 
         with open('data/bank.json','w') as file:
             json.dump(data,file,indent = 4)
@@ -41,12 +44,20 @@ class account:
             self.balance -= withdraw
         self.save()
         return True
-    
+
     @classmethod
-    def login(cls, acc_no, password):
+    def login(cls, username, password):
+        status = False
+        acc = None
         with open('data/bank.json','r') as file:
             data = json.load(file)
-        if acc_no in data and data[acc_no]['password'] == password:
-            username = data[acc_no]['username']
-            balance = data[acc_no]['balance']
-            acc = account(acc_no,username,password,balance)
+        for acc_no in data:
+            if data[acc_no]['username'] == username and bcrypt.checkpw(password.encode(), base64.b64decode(data[acc_no]['password'].encode())):
+                username = data[acc_no]['username']
+                balance = data[acc_no]['balance']
+                acc = account(acc_no,username,password,balance)
+                status = True
+        return status,acc
+                
+            
+                

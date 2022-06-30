@@ -32,7 +32,7 @@ def success_acc():
 def trans_options():
     menu = '''
     1. Check Balance
-    2. Deposite
+    2. Deposit
     3. Withdraw
     4. Log out\n'''
     choice = input(menu)
@@ -43,11 +43,11 @@ def diplay_balance(acc):
     return
 
 def get_deposit():
-    deposit = float(input('Hello, enter the ammount you wish to deposit: '))
+    deposit = float(input('Hello, enter the ammount you wish to deposit\t: '))
     return deposit
 
 def get_withdraw():
-    withdraw = float(input('Hello, enter the ammount you wish to deposit: '))
+    withdraw = float(input('Hello, enter the ammount you wish to withdraw\t: '))
     return withdraw
 
 def incorrect_choice():
@@ -55,12 +55,12 @@ def incorrect_choice():
     return
 
 def login():
-    acc_no = input("Enter your acc_no")
-    password = stdiomask.getpass(prompt='Enter your password')
-    return acc_no,password
+    username = input("Enter your username\t: ")
+    password = stdiomask.getpass(prompt='Enter your password\t: ')
+    return username,password
 
 def invalid_creds():
-    print("The entered Account number doesn't exist or the password was incorrect")
+    print("The entered Account number doesn't exist or the password was incorrect\n")
 
 def success_login():
     print("Login Successful!!")

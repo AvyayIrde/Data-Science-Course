@@ -19,21 +19,21 @@ def onboard():
         choice = v.menu()
         if choice == '1':
             username,password = v.create_acc()
-            acc = m.account.create_acc(username, password)
+            status,acc = m.account.create_acc(username, password)
             v.success_acc()
-            #assuming person who creates account is by default logged in 
             onboard()
         elif choice == '2':
-            acc_no,password=v.login()
-            acc = m.account.login(acc_no,password)
-            while acc == False:
+            username,password=v.login()
+            status,acc = m.account.login(username,password)
+            while status == False:
                 v.invalid_creds()
-                acc_no,password=v.login()
-                acc = m.account.login(acc_no,password)
+                username,password=v.login()
+                status,acc = m.account.login(username,password)
             v.success_login()
             transactions(acc)
         elif choice =='3':
             v.exit()
+            exit()
         else:
             v.incorrect_choice()
             onboard()
@@ -41,7 +41,7 @@ def onboard():
 def transactions(acc):
     '''
     1. Check Balance
-    2. Deposite
+    2. Deposit
     3. Withdraw
     4. Log out'''
     choice = None
