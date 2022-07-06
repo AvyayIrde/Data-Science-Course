@@ -5,6 +5,12 @@
             "driver": "SQLite",
             "database": "${workspaceFolder:Week 4}/data/employee.db",
             "name": "Employee"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Store",
+            "database": "${workspaceFolder:Week 4}/data/store.db"
         }
     ],
     "sqltools.useNodeRuntime": true

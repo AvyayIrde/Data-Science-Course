@@ -1,0 +1,251 @@
+,Rank,Movie,year,genre,Runtime,Certificate,Rating
+0,1.,The Shawshank Redemption,1994,Drama,142 min,A,9.3
+1,2.,The Godfather,1972,"Crime, Drama",175 min,A,9.2
+2,3.,The Dark Knight,2008,"Action, Crime, Drama",152 min,UA,9.0
+3,4.,The Lord of the Rings: The Return of the King,2003,"Action, Adventure, Drama",201 min,U,9.0
+4,5.,Schindler's List,1993,"Biography, Drama, History",195 min,A,9.0
+5,6.,The Godfather Part II,1974,"Crime, Drama",202 min,A,9.0
+6,7.,12 Angry Men,1957,"Crime, Drama",96 min,U,9.0
+7,8.,Jai Bhim,2021,"Crime, Drama, Mystery",164 min,A,8.9
+8,9.,Pulp Fiction,1994,"Crime, Drama",154 min,A,8.9
+9,10.,Inception,2010,"Action, Adventure, Sci-Fi",148 min,UA,8.8
+10,11.,The Lord of the Rings: The Two Towers,2002,"Action, Adventure, Drama",179 min,UA,8.8
+11,12.,Fight Club,1999,Drama,139 min,A,8.8
+12,13.,The Lord of the Rings: The Fellowship of the Ring,2001,"Action, Adventure, Drama",178 min,U,8.8
+13,14.,Forrest Gump,1994,"Drama, Romance",142 min,UA,8.8
+14,15.,"Il buono, il brutto, il cattivo",1966,"Adventure, Western",161 min,A,8.8
+15,16.,The Matrix,1999,"Action, Sci-Fi",136 min,A,8.7
+16,17.,Goodfellas,1990,"Biography, Crime, Drama",145 min,A,8.7
+17,18.,The Empire Strikes Back,1980,"Action, Adventure, Fantasy",124 min,UA,8.7
+18,19.,One Flew Over the Cuckoo's Nest,1975,Drama,133 min,A,8.7
+19,20.,Top Gun: Maverick,2022,"Action, Drama",130 min,UA,8.6
+20,21.,Interstellar,2014,"Adventure, Drama, Sci-Fi",169 min,UA,8.6
+21,22.,Cidade de Deus,2002,"Crime, Drama",130 min,A,8.6
+22,23.,Sen to Chihiro no kamikakushi,2001,"Animation, Adventure, Family",125 min,U,8.6
+23,24.,Saving Private Ryan,1998,"Drama, War",169 min,A,8.6
+24,25.,The Green Mile,1999,"Crime, Drama, Fantasy",189 min,UA,8.6
+25,26.,La vita è bella,1997,"Comedy, Drama, Romance",116 min,U,8.6
+26,27.,Se7en,1995,"Crime, Drama, Mystery",127 min,A,8.6
+27,28.,Terminator 2: Judgment Day,1991,"Action, Sci-Fi",137 min,A,8.6
+28,29.,The Silence of the Lambs,1991,"Crime, Drama, Thriller",118 min,A,8.6
+29,30.,Star Wars,1977,"Action, Adventure, Fantasy",121 min,U,8.6
+30,31.,Seppuku,1962,"Action, Drama, Mystery",133 min,,8.6
+31,32.,Shichinin no samurai,1954,"Action, Drama",207 min,U,8.6
+32,33.,It's a Wonderful Life,1946,"Drama, Family, Fantasy",130 min,PG,8.6
+33,34.,Gisaengchung,2019,"Comedy, Drama, Thriller",132 min,A,8.5
+34,35.,Whiplash,2014,"Drama, Music",106 min,A,8.5
+35,36.,The Intouchables,2011,"Biography, Comedy, Drama",112 min,UA,8.5
+36,37.,The Prestige,2006,"Drama, Mystery, Sci-Fi",130 min,U,8.5
+37,38.,The Departed,2006,"Crime, Drama, Thriller",151 min,A,8.5
+38,39.,The Pianist,2002,"Biography, Drama, Music",150 min,13,8.5
+39,40.,Gladiator,2000,"Action, Adventure, Drama",155 min,UA,8.5
+40,41.,American History X,1998,"Crime, Drama",119 min,R,8.5
+41,42.,The Usual Suspects,1995,"Crime, Drama, Mystery",106 min,A,8.5
+42,43.,Léon,1994,"Action, Crime, Drama",110 min,A,8.5
+43,44.,The Lion King,1994,"Animation, Adventure, Drama",88 min,U,8.5
+44,45.,Nuovo Cinema Paradiso,1988,"Drama, Romance",155 min,U,8.5
+45,46.,Hotaru no haka,1988,"Animation, Drama, War",89 min,U,8.5
+46,47.,Back to the Future,1985,"Adventure, Comedy, Sci-Fi",116 min,U,8.5
+47,48.,Apocalypse Now,1979,"Drama, Mystery, War",147 min,R,8.5
+48,49.,Alien,1979,"Horror, Sci-Fi",117 min,R,8.5
+49,50.,Once Upon a Time in the West,1968,Western,165 min,U,8.5
+50,51.,Psycho,1960,"Horror, Mystery, Thriller",109 min,A,8.5
+51,52.,Rear Window,1954,"Mystery, Thriller",112 min,U,8.5
+52,53.,Casablanca,1942,"Drama, Romance, War",102 min,U,8.5
+53,54.,Modern Times,1936,"Comedy, Drama, Romance",87 min,,8.5
+54,55.,City Lights,1931,"Comedy, Drama, Romance",87 min,G,8.5
+55,56.,Hamilton,2020,"Biography, Drama, History",160 min,12+,8.4
+56,57.,Capharnaüm,2018,Drama,126 min,A,8.4
+57,58.,Joker,I 2019,"Crime, Drama, Thriller",122 min,A,8.4
+58,59.,Kimi no na wa.,2016,"Animation, Drama, Fantasy",106 min,U,8.4
+59,60.,Spider-Man: Into the Spider-Verse,2018,"Animation, Action, Adventure",117 min,U,8.4
+60,61.,Avengers: Endgame,2019,"Action, Adventure, Drama",181 min,UA,8.4
+61,62.,Avengers: Infinity War,2018,"Action, Adventure, Sci-Fi",149 min,UA,8.4
+62,63.,Coco,I 2017,"Animation, Adventure, Comedy",105 min,U,8.4
+63,64.,Django Unchained,2012,"Drama, Western",165 min,A,8.4
+64,65.,The Dark Knight Rises,2012,"Action, Drama",164 min,UA,8.4
+65,66.,3 Idiots,2009,"Comedy, Drama",170 min,UA,8.4
+66,67.,WALL·E,2008,"Animation, Adventure, Family",98 min,U,8.4
+67,68.,The Lives of Others,2006,"Drama, Mystery, Thriller",137 min,A,8.4
+68,69.,Oldeuboi,2003,"Action, Drama, Mystery",101 min,A,8.4
+69,70.,Memento,2000,"Mystery, Thriller",113 min,UA,8.4
+70,71.,American Beauty,1999,Drama,122 min,UA,8.4
+71,72.,Mononoke-hime,1997,"Animation, Adventure, Fantasy",134 min,U,8.4
+72,73.,Braveheart,1995,"Biography, Drama, History",178 min,A,8.4
+73,74.,Idi i smotri,1985,"Drama, Thriller, War",142 min,A,8.4
+74,75.,Aliens,1986,"Action, Adventure, Sci-Fi",137 min,U,8.4
+75,76.,Amadeus,1984,"Biography, Drama, Music",160 min,R,8.4
+76,77.,Raiders of the Lost Ark,1981,"Action, Adventure",115 min,A,8.4
+77,78.,Das Boot,1981,"Drama, War",149 min,R,8.4
+78,79.,The Shining,1980,"Drama, Horror",146 min,A,8.4
+79,80.,Tengoku to jigoku,1963,"Crime, Drama, Mystery",143 min,,8.4
+80,81.,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,1964,"Comedy, War",95 min,A,8.4
+81,82.,Witness for the Prosecution,1957,"Crime, Drama, Mystery",116 min,U,8.4
+82,83.,Paths of Glory,1957,"Drama, War",88 min,A,8.4
+83,84.,Sunset Blvd.,1950,"Drama, Film-Noir",110 min,,8.4
+84,85.,The Great Dictator,1940,"Comedy, Drama, War",125 min,,8.4
+85,86.,Everything Everywhere All at Once,2022,"Action, Adventure, Comedy",139 min,R,8.3
+86,87.,Dangal,2016,"Action, Biography, Drama",161 min,U,8.3
+87,88.,Jagten,2012,Drama,115 min,7,8.3
+88,89.,Jodaeiye Nader az Simin,2011,Drama,123 min,7,8.3
+89,90.,Incendies,2010,"Drama, Mystery",131 min,18,8.3
+90,91.,Spider-Man: No Way Home,2021,"Action, Adventure, Fantasy",148 min,UA,8.3
+91,92.,Up,2009,"Animation, Adventure, Comedy",96 min,U,8.3
+92,93.,Taare Zameen Par,2007,"Drama, Family",165 min,U,8.3
+93,94.,Toy Story 3,2010,"Animation, Adventure, Comedy",103 min,U,8.3
+94,95.,Inglourious Basterds,2009,"Adventure, Drama, War",153 min,A,8.3
+95,96.,Eternal Sunshine of the Spotless Mind,2004,"Drama, Romance, Sci-Fi",108 min,UA,8.3
+96,97.,Le fabuleux destin d'Amélie Poulain,2001,"Comedy, Romance",122 min,U,8.3
+97,98.,Snatch,2000,"Comedy, Crime",104 min,UA,8.3
+98,99.,Requiem for a Dream,2000,Drama,102 min,A,8.3
+99,100.,Good Will Hunting,1997,"Drama, Romance",126 min,U,8.3
+100,101.,Toy Story,1995,"Animation, Adventure, Comedy",81 min,U,8.3
+101,102.,Heat,1995,"Action, Crime, Drama",170 min,A,8.3
+102,103.,Reservoir Dogs,1992,"Crime, Drama, Thriller",99 min,15+,8.3
+103,104.,Full Metal Jacket,1987,"Drama, War",116 min,UA,8.3
+104,105.,Once Upon a Time in America,1984,"Crime, Drama",229 min,A,8.3
+105,106.,Scarface,1983,"Crime, Drama",170 min,A,8.3
+106,107.,Star Wars: Episode VI - Return of the Jedi,1983,"Action, Adventure, Fantasy",131 min,U,8.3
+107,108.,The Sting,1973,"Comedy, Crime, Drama",129 min,U,8.3
+108,109.,A Clockwork Orange,1971,"Crime, Sci-Fi",136 min,A,8.3
+109,110.,2001: A Space Odyssey,1968,"Adventure, Sci-Fi",149 min,U,8.3
+110,111.,To Kill a Mockingbird,1962,"Crime, Drama",129 min,U,8.3
+111,112.,Lawrence of Arabia,1962,"Adventure, Biography, Drama",218 min,U,8.3
+112,113.,Judgment at Nuremberg,1961,"Drama, War",179 min,A,8.3
+113,114.,The Apartment,1960,"Comedy, Drama, Romance",125 min,U,8.3
+114,115.,North by Northwest,1959,"Action, Adventure, Mystery",136 min,U,8.3
+115,116.,Vertigo,1958,"Mystery, Romance, Thriller",128 min,A,8.3
+116,117.,Pather Panchali,1955,Drama,125 min,U,8.3
+117,118.,Singin' in the Rain,1952,"Comedy, Musical, Romance",103 min,G,8.3
+118,119.,Ikiru,1952,Drama,143 min,U,8.3
+119,120.,Ladri di biciclette,1948,Drama,89 min,U,8.3
+120,121.,Double Indemnity,1944,"Crime, Drama, Film-Noir",107 min,,8.3
+121,122.,Citizen Kane,1941,"Drama, Mystery",119 min,UA,8.3
+122,123.,M - Eine Stadt sucht einen Mörder,1931,"Crime, Mystery, Thriller",117 min,,8.3
+123,124.,Metropolis,1927,"Drama, Sci-Fi",153 min,,8.3
+124,125.,The Kid,1921,"Comedy, Drama, Family",68 min,,8.3
+125,126.,1917,2019,"Action, Drama, War",119 min,R,8.2
+126,127.,Green Book,2018,"Biography, Comedy, Drama",130 min,UA,8.2
+127,128.,Inside Out,I 2015,"Animation, Adventure, Comedy",95 min,U,8.2
+128,129.,El secreto de sus ojos,2009,"Drama, Mystery, Romance",129 min,R,8.2
+129,130.,Warrior,2011,"Action, Drama, Sport",140 min,UA,8.2
+130,131.,Shutter Island,2010,"Mystery, Thriller",138 min,A,8.2
+131,132.,The Father,I 2020,"Drama, Mystery",97 min,UA,8.2
+132,133.,The Wolf of Wall Street,2013,"Biography, Comedy, Crime",180 min,A,8.2
+133,134.,No Country for Old Men,2007,"Crime, Drama, Thriller",122 min,18,8.2
+134,135.,Babam ve Oglum,2005,"Drama, Family",112 min,,8.2
+135,136.,There Will Be Blood,2007,Drama,158 min,A,8.2
+136,137.,Pan's Labyrinth,2006,"Drama, Fantasy, War",118 min,UA,8.2
+137,138.,V for Vendetta,2005,"Action, Drama, Sci-Fi",132 min,UA,8.2
+138,139.,Batman Begins,2005,"Action, Crime, Drama",140 min,UA,8.2
+139,140.,Der Untergang,2004,"Biography, Drama, History",156 min,R,8.2
+140,141.,Hauru no ugoku shiro,2004,"Animation, Adventure, Family",119 min,U,8.2
+141,142.,A Beautiful Mind,2001,"Biography, Drama",135 min,UA,8.2
+142,143.,Kill Bill: Vol. 1,2003,"Action, Crime, Drama",111 min,A,8.2
+143,144.,Finding Nemo,2003,"Animation, Adventure, Comedy",100 min,U,8.2
+144,145.,The Sixth Sense,1999,"Drama, Mystery, Thriller",107 min,A,8.2
+145,146.,"Lock, Stock and Two Smoking Barrels",1998,"Action, Comedy, Crime",107 min,A,8.2
+146,147.,The Truman Show,1998,"Comedy, Drama",103 min,U,8.2
+147,148.,L.A. Confidential,1997,"Crime, Drama, Mystery",138 min,A,8.2
+148,149.,Bacheha-Ye aseman,1997,"Drama, Family, Sport",89 min,PG,8.2
+149,150.,Casino,1995,"Crime, Drama",178 min,A,8.2
+150,151.,Jurassic Park,1993,"Action, Adventure, Sci-Fi",127 min,UA,8.2
+151,152.,Unforgiven,1992,"Drama, Western",130 min,A,8.2
+152,153.,Indiana Jones and the Last Crusade,1989,"Action, Adventure",127 min,U,8.2
+153,154.,Die Hard,1988,"Action, Thriller",132 min,A,8.2
+154,155.,Ran,1985,"Action, Drama, War",162 min,U,8.2
+155,156.,The Thing,1982,"Horror, Mystery, Sci-Fi",109 min,A,8.2
+156,157.,Raging Bull,1980,"Biography, Drama, Sport",129 min,A,8.2
+157,158.,The Elephant Man,1980,"Biography, Drama",124 min,UA,8.2
+158,159.,Taxi Driver,1976,"Crime, Drama",114 min,A,8.2
+159,160.,Monty Python and the Holy Grail,1975,"Adventure, Comedy, Fantasy",91 min,U,8.2
+160,161.,Dersu Uzala,1975,"Adventure, Biography, Drama",142 min,U,8.2
+161,162.,Chinatown,1974,"Drama, Mystery, Thriller",130 min,UA,8.2
+162,163.,Per qualche dollaro in più,1965,Western,132 min,U,8.2
+163,164.,The Great Escape,1963,"Adventure, Drama, History",172 min,U,8.2
+164,165.,Yôjinbô,1961,"Action, Drama, Thriller",110 min,U,8.2
+165,166.,Some Like It Hot,1959,"Comedy, Music, Romance",121 min,U,8.2
+166,167.,The Bridge on the River Kwai,1957,"Adventure, Drama, War",161 min,U,8.2
+167,168.,Dial M for Murder,1954,"Crime, Thriller",105 min,A,8.2
+168,169.,Tôkyô monogatari,1953,Drama,136 min,U,8.2
+169,170.,Le salaire de la peur,1953,"Adventure, Drama, Thriller",131 min,U,8.2
+170,171.,Rashômon,1950,"Crime, Drama, Mystery",88 min,U,8.2
+171,172.,All About Eve,1950,Drama,138 min,,8.2
+172,173.,The Treasure of the Sierra Madre,1948,"Adventure, Drama, Western",126 min,,8.2
+173,174.,To Be or Not to Be,1942,"Comedy, Romance, War",99 min,,8.2
+174,175.,Gone with the Wind,1939,"Drama, Romance, War",238 min,U,8.2
+175,176.,La passion de Jeanne d'Arc,1928,"Biography, Drama, History",110 min,,8.2
+176,177.,The General,1926,"Action, Adventure, Comedy",67 min,,8.2
+177,178.,The Gold Rush,1925,"Adventure, Comedy, Drama",95 min,,8.2
+178,179.,Sherlock Jr.,1924,"Action, Comedy, Romance",45 min,,8.2
+179,180.,"Three Billboards Outside Ebbing, Missouri",2017,"Comedy, Crime, Drama",115 min,A,8.1
+180,181.,Klaus,2019,"Animation, Adventure, Comedy",96 min,7,8.1
+181,182.,Ah-ga-ssi,2016,"Drama, Romance, Thriller",145 min,A,8.1
+182,183.,Logan,2017,"Action, Drama, Sci-Fi",137 min,A,8.1
+183,184.,Room,I 2015,"Drama, Thriller",118 min,U,8.1
+184,185.,Relatos salvajes,2014,"Comedy, Drama, Thriller",122 min,18,8.1
+185,186.,The Grand Budapest Hotel,2014,"Adventure, Comedy, Crime",99 min,UA,8.1
+186,187.,Gone Girl,2014,"Drama, Mystery, Thriller",149 min,A,8.1
+187,188.,Hacksaw Ridge,2016,"Biography, Drama, History",139 min,A,8.1
+188,189.,12 Years a Slave,2013,"Biography, Drama, History",134 min,A,8.1
+189,190.,Rush,I 2013,"Action, Biography, Drama",123 min,R,8.1
+190,191.,Ford v Ferrari,2019,"Action, Biography, Drama",152 min,UA,8.1
+191,192.,Spotlight,I 2015,"Biography, Crime, Drama",129 min,A,8.1
+192,193.,The Help,2011,Drama,146 min,UA,8.1
+193,194.,Prisoners,2013,"Crime, Drama, Mystery",153 min,A,8.1
+194,195.,Mad Max: Fury Road,2015,"Action, Adventure, Sci-Fi",120 min,UA,8.1
+195,196.,Gran Torino,2008,Drama,116 min,UA,8.1
+196,197.,Harry Potter and the Deathly Hallows: Part 2,2011,"Adventure, Fantasy, Mystery",130 min,UA,8.1
+197,198.,Hachi: A Dog's Tale,2009,"Biography, Drama, Family",93 min,U,8.1
+198,199.,Mary and Max.,2009,"Animation, Comedy, Drama",92 min,,8.1
+199,200.,How to Train Your Dragon,2010,"Animation, Action, Adventure",98 min,U,8.1
+200,201.,Into the Wild,2007,"Adventure, Biography, Drama",148 min,U,8.1
+201,202.,Million Dollar Baby,2004,"Drama, Sport",132 min,UA,8.1
+202,203.,Hotel Rwanda,2004,"Biography, Drama, History",121 min,UA,8.1
+203,204.,Ratatouille,2007,"Animation, Adventure, Comedy",111 min,U,8.1
+204,205.,Before Sunset,2004,"Drama, Romance",80 min,A,8.1
+205,206.,Salinui chueok,2003,"Crime, Drama, Mystery",131 min,UA,8.1
+206,207.,Pirates of the Caribbean: The Curse of the Black Pearl,2003,"Action, Adventure, Fantasy",143 min,UA,8.1
+207,208.,Catch Me If You Can,2002,"Biography, Crime, Drama",141 min,A,8.1
+208,209.,Amores perros,2000,"Drama, Thriller",154 min,A,8.1
+209,210.,"Monsters, Inc.",2001,"Animation, Adventure, Comedy",92 min,U,8.1
+210,211.,The Big Lebowski,1998,"Comedy, Crime",117 min,UA,8.1
+211,212.,Trainspotting,1996,Drama,93 min,A,8.1
+212,213.,Fargo,1996,"Crime, Thriller",98 min,A,8.1
+213,214.,La haine,1995,"Crime, Drama",98 min,Not Rated,8.1
+214,215.,Before Sunrise,1995,"Drama, Romance",101 min,16,8.1
+215,216.,In the Name of the Father,1993,"Biography, Crime, Drama",133 min,UA,8.1
+216,217.,Groundhog Day,1993,"Comedy, Drama, Fantasy",101 min,U,8.1
+217,218.,Dead Poets Society,1989,"Comedy, Drama",128 min,U,8.1
+218,219.,Tonari no Totoro,1988,"Animation, Comedy, Family",86 min,U,8.1
+219,220.,Stand by Me,1986,"Adventure, Drama",89 min,U,8.1
+220,221.,Platoon,1986,"Drama, War",120 min,UA,8.1
+221,222.,The Terminator,1984,"Action, Sci-Fi",107 min,UA,8.1
+222,223.,Gandhi,1982,"Biography, Drama",191 min,U,8.1
+223,224.,Blade Runner,1982,"Action, Drama, Sci-Fi",117 min,UA,8.1
+224,225.,The Deer Hunter,1978,"Drama, War",183 min,A,8.1
+225,226.,Rocky,1976,"Drama, Sport",120 min,U,8.1
+226,227.,Network,1976,Drama,121 min,UA,8.1
+227,228.,Jaws,1975,"Adventure, Thriller",124 min,A,8.1
+228,229.,Barry Lyndon,1975,"Adventure, Drama, War",185 min,U,8.1
+229,230.,The Exorcist,1973,Horror,122 min,A,8.1
+230,231.,Cool Hand Luke,1967,"Crime, Drama",127 min,A,8.1
+231,232.,Persona,1966,"Drama, Thriller",85 min,,8.1
+232,233.,The Sound of Music,1965,"Biography, Drama, Family",172 min,U,8.1
+233,234.,La battaglia di Algeri,1966,"Drama, War",121 min,,8.1
+234,235.,Les quatre cents coups,1959,"Crime, Drama",99 min,U,8.1
+235,236.,Ben-Hur,1959,"Adventure, Drama, History",212 min,U,8.1
+236,237.,Smultronstället,1957,"Drama, Romance",91 min,U,8.1
+237,238.,Det sjunde inseglet,1957,"Drama, Fantasy",96 min,A,8.1
+238,239.,On the Waterfront,1954,"Crime, Drama, Thriller",108 min,A,8.1
+239,240.,The Third Man,1949,"Film-Noir, Mystery, Thriller",104 min,U,8.1
+240,241.,The Best Years of Our Lives,1946,"Drama, Romance, War",170 min,,8.1
+241,242.,Rebecca,1940,"Drama, Film-Noir, Mystery",130 min,,8.1
+242,243.,The Grapes of Wrath,1940,Drama,129 min,,8.1
+243,244.,The Wizard of Oz,1939,"Adventure, Family, Fantasy",102 min,U,8.1
+244,245.,Mr. Smith Goes to Washington,1939,"Comedy, Drama",129 min,U,8.1
+245,246.,It Happened One Night,1934,"Comedy, Romance",105 min,,8.1
+246,247.,The Incredibles,2004,"Animation, Action, Adventure",115 min,U,8.0
+247,248.,Aladdin,1992,"Animation, Adventure, Comedy",90 min,U,8.0
+248,249.,Beauty and the Beast,1991,"Animation, Family, Fantasy",84 min,U,8.0
+249,250.,Life of Brian,1979,Comedy,94 min,,8.0
