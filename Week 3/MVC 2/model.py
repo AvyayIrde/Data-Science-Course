@@ -21,8 +21,8 @@ class account:
             data = json.load(file)
         while acc_no in data:
             acc_no = randrange(acc_start,acc_end)
-        acc = account(acc_no, username, password)
-        acc.save()
+        acc = account(acc_no, username, password) # cls(acc_no, username, password)
+        acc.save() 
         return status,acc
 
     def save(self):
@@ -55,7 +55,7 @@ class account:
             if data[acc_no]['username'] == username and bcrypt.checkpw(password.encode(), base64.b64decode(data[acc_no]['password'].encode())):
                 username = data[acc_no]['username']
                 balance = data[acc_no]['balance']
-                acc = account(acc_no,username,password,balance)
+                acc = account(acc_no,username,password,balance) # cls(acc_no, username, password)
                 status = True
         return status,acc
                 
