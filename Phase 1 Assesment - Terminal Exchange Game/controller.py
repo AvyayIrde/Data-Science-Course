@@ -53,8 +53,23 @@ def transactions(user):
     1. Search Stock
     2. Buy stock
     3. Sell stock
-    4. View portfolio
+    4. View portfolio (owned stock, balance, profits/losses)
+    5. Logout
     '''
+    choice = None
+    while choice != '4':
+        choice = v.transactions_menu()
+        if choice == '1':
+            Stock = m.stock.search_stock()
+            v.stock_info(Stock)
+        elif choice == '2':
+            v.buy_stock()
+        elif choice == '3':
+            v.sell_stock()
+        elif choice == '4':
+            v.view_portfolio(user)
+        else:
+            continue
 
 def main():
     onboard()

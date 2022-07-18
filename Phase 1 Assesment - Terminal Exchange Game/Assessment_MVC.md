@@ -36,7 +36,7 @@
         * buying should subtract from their funds, they cannot spend more money then what they have
         * selling will add to their funds, they cannot sell more stocks then what they have
         * users should be buying and selling at the current rate of the market price
-    * view their "portfolio"
+    * view their "portfolio"        self.name = name
         * what are their current earnings
         * view their list of exchanges w.r.t buy/sell
 

@@ -1,3 +1,4 @@
+from locale import currency
 import stdiomask
 
 def onboard():
@@ -45,3 +46,23 @@ def login():
 
 def exit():
     print("Thank you for playing!")
+
+def transactions_menu():
+    menu = '''
+    1. Search Stock
+    2. Buy stock
+    3. Sell stock
+    4. View portfolio
+    5. Logout
+    '''
+    choice = input(menu)
+    return choice 
+
+def stock_info(Stock):
+    print('''
+    Company Name\t: {}
+    Symbol\t\t: {}
+    Timezone\t\t: {}
+    Currency\t\t: {}
+    Price\t\t:  {}
+    '''.format(Stock.name, Stock.symbol, Stock.timezone, Stock,currency, Stock.price))
