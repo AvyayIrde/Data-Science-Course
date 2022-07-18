@@ -58,11 +58,32 @@ def transactions_menu():
     choice = input(menu)
     return choice 
 
+def search_stock():
+    keyword = input("Enter name of company\t: ")
+    return keyword
+
+
 def stock_info(Stock):
     print('''
     Company Name\t: {}
     Symbol\t\t: {}
     Timezone\t\t: {}
+    Region\t\t: {}
     Currency\t\t: {}
-    Price\t\t:  {}
-    '''.format(Stock.name, Stock.symbol, Stock.timezone, Stock,currency, Stock.price))
+    Price\t\t: {}
+    '''.format(Stock.name, Stock.symbol, Stock.timezone, Stock.region, Stock.currency, Stock.price))
+
+def trade_stock():
+    symbol = input("Enter symbol of the stock you want to trade in\t: ")
+    return symbol
+
+def stock_quantity(Stock, user):
+    print('''
+    Avaiable Balance\t: {}
+    Stock Name\t\t: {}
+    Stock Symbol\t: {}
+    Stock Price\t\t: {}
+    Stock Currency\t: {} 
+    '''.format(user.balance, Stock.name, Stock.symbol, Stock.price, Stock.currency))
+    quantity = int(input("Enter the amount of stock you want to trade : ")) 
+    return quantity

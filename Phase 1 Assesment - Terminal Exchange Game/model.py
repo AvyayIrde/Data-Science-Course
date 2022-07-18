@@ -7,6 +7,8 @@ import bcrypt
 from configparser import ConfigParser 
 import datetime
 
+from controller import transactions
+
 def read_db_config(filename='data/config.ini', section='mysql'):    
         # create parser and read ini configuration file
         parser = ConfigParser()
@@ -97,11 +99,25 @@ class stock:
             "8. currency": "INR",
             "9. matchScore": "0.8696"
     '''
-    def __init__(self, name, symbol, timezone, currency, price=0):
+    '''
+    "Global Quote": {
+        "01. symbol": "TATACOFFEE.BSE",
+        "02. open": "209.6500",
+        "03. high": "217.8000",
+        "04. low": "209.6500",
+        "05. price": "217.2000",
+        "06. volume": "96934",
+        "07. latest trading day": "2022-07-15",
+        "08. previous close": "211.4500",
+        "09. change": "5.7500",
+        "10. change percent": "2.7193%"
+    '''
+    def __init__(self, name, symbol, timezone, currency, region, price=0):
         self.name = name
         self.symbol = symbol
         self.timezone = timezone
         self.currency = currency
+        self.region = region
         self.price = price
 
     @classmethod
@@ -109,21 +125,75 @@ class stock:
         db_config = read_db_config()
         conn = MySQLConnection(**db_config)
         cursor = conn.cursor()
-        query = "SELECT * FROM STOCKS WHERE company_name LIKE %s"
-        cursor.execute(query, (keyword,))
-        result = cursor.fetchall()
-        if result is not None: 
-            Stock= cls(result[0], result[1], result[2], result[3], result[4])
-        else:    
-            data = API_call("SYMBOL_SEARCH",keyword)
-            price = API_call("GLOBAL_QUOTE",data['bestMatches'][0]['1. symbol'])
-            Stock = cls(data['bestMatches'][0]['2. name'], 
-                        data['bestMatches'][0]['1. symbol'], 
-                        data['bestMatches'][0]['7. timezone'], 
-                        data['bestMatches'][0]['8. currency'],
-                        price["Global Quote"]["05. price"])
-            query = "INSERT INTO STOCKS(company_name, symbol, timezone, currency, price) VALUES (%s, %s, %s, %s, %s)"
-            cursor.execute(query, (Stock.name, Stock.symbol, Stock.timezone, Stock.currency, Stock.price))
-            conn.commit()
-            conn.close()
+        data = API_call("SYMBOL_SEARCH",keyword)
+        price = API_call("GLOBAL_QUOTE",data['bestMatches'][0]['1. symbol'])
+        Stock = cls(data['bestMatches'][0]['2. name'], 
+                    data['bestMatches'][0]['1. symbol'], 
+                    data['bestMatches'][0]['7. timezone'], 
+                    data['bestMatches'][0]['8. currency'],
+                    data['bestMatches'][0]['4. region'],
+                    price['Global Quote']['05. price'])
+        query = "SELECT * FROM STOCKS WHERE symbol LIKE %s"
+        # cursor.execute(query, data['bestMatches'][0]['1. symbol'],)
+        cursor.execute(query, (Stock.symbol,))
+        result = cursor.fetchone()
+        if result is not None:            
+            query = "UPDATE STOCKS SET price = %s WHERE symbol = %s"
+            cursor.execute(query, (float(Stock.price), Stock.symbol,))
+        else:
+            query = "INSERT INTO STOCKS(company_name, symbol, timezone, currency, price, region) VALUES (%s, %s, %s, %s, %s, %s)"
+            cursor.execute(query, (Stock.name, Stock.symbol, Stock.timezone, Stock.currency, float(Stock.price), Stock.region))
+        conn.commit()
+        conn.close()
         return Stock
+
+class trades:
+    def __init__(self, user, Stock, quantity):
+        self.user = user
+        self.Stock = Stock
+        self.quantity = quantity
+
+    def trade_stock(self,action):
+        transaction_ammount = float(self.Stock.price) * int(self.quantity)
+        db_config = read_db_config()
+        conn = MySQLConnection(**db_config)
+        cursor = conn.cursor()
+        if action == 'buy':
+            if transaction_ammount > self.user.balance:
+                return False
+            else:
+                query = "INSERT INTO TRADES(username, stock_symbol, price, quantity, transaction_ammount) VALUES (%s, %s, %s, %s, %s)"
+                cursor.execute(query, (self.user.username, self.Stock.symbol, float(self.Stock.price), int(self.quantity), transaction_ammount*-1.0))
+                conn.commit()
+                self.user.balance = self.user.balance - transaction_ammount
+        elif action == 'sell':
+            query = "SELECT quantity FROM TRADES WHERE username = %s AND stock_symbol = %s "
+            cursor.execute(query,(self.user.username, self.Stock.symbol,))
+            result = cursor.fetchall()
+            owned = 0
+            for i in range(0,len(result)):
+                owned += result[i][0]
+            if owned < self.quantity:
+                return False
+            else:
+                query = "INSERT INTO TRADES(username, stock_symbol, price, quantity, transaction_ammount) VALUES (%s, %s, %s, %s, %s)"
+                cursor.execute(query, (self.user.username, self.Stock.symbol, float(self.Stock.price), int(self.quantity)*-1, transaction_ammount))
+                conn.commit()
+                self.user.balance = self.user.balance + transaction_ammount
+        query = "UPDATE USERS SET balance = %s WHERE username = %s"
+        cursor.execute(query, (self.user.balance, self.user.username))
+        conn.commit()
+        conn.close()
+        return True
+
+    @staticmethod
+    def portfolio(user):
+        db_config = read_db_config()
+        conn = MySQLConnection(**db_config)
+        cursor = conn.cursor()
+        query = "SELECT stock_symbol, quantity FROM TRADES WHERE username = %s"
+        cursor.execute(query,(user.username,))
+        result = cursor.fetchall()
+        for i in range(0,len(result)):
+            owned += result[i][0]
+        

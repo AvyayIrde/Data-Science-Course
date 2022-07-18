@@ -57,17 +57,36 @@ def transactions(user):
     5. Logout
     '''
     choice = None
+    status = False
     while choice != '4':
         choice = v.transactions_menu()
         if choice == '1':
-            Stock = m.stock.search_stock()
+            keyword = v.search_stock()
+            Stock = m.stock.search_stock(keyword)
             v.stock_info(Stock)
         elif choice == '2':
-            v.buy_stock()
+            symbol = v.trade_stock()
+            Stock = m.stock.search_stock(symbol)
+            quantity = v.stock_quantity(Stock, user)
+            trade = m.trades(user, Stock, quantity)
+            status = trade.trade_stock(action = 'buy')
+            if status:
+                v.operation_successsfull()
+            else:
+                v.operation_failed()
         elif choice == '3':
-            v.sell_stock()
+            symbol = v.trade_stock()
+            Stock = m.stock.search_stock(symbol)
+            quantity = v.stock_quantity(Stock, user)
+            trade = m.trades(user, Stock, quantity)
+            status = trade.trade_stock(action = 'sell')
+            if status:
+                v.operation_successsfull()
+            else:
+                v.operation_failed()
         elif choice == '4':
-            v.view_portfolio(user)
+            Stocks = m.trades.portfolio(user)
+            v.view_portfolio(user, Stocks)
         else:
             continue
 
