@@ -45,6 +45,8 @@ def onboard():
                 if status:
                     v.operation_successsfull(username)
                     transactions(user)
+        elif choice == '3':
+            exit()
         else:
             continue
 
@@ -58,7 +60,7 @@ def transactions(user):
     '''
     choice = None
     status = False
-    while choice != '4':
+    while choice != '5':
         choice = v.transactions_menu()
         if choice == '1':
             keyword = v.search_stock()
@@ -85,8 +87,10 @@ def transactions(user):
             else:
                 v.operation_failed()
         elif choice == '4':
-            Stocks = m.trades.portfolio(user)
-            v.view_portfolio(user, Stocks)
+            portfolio = m.trades.portfolio(user)
+            v.view_portfolio(user, portfolio)
+        elif choice == '5':
+            onboard()
         else:
             continue
 

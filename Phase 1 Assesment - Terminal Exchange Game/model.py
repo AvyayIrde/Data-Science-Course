@@ -191,9 +191,31 @@ class trades:
         db_config = read_db_config()
         conn = MySQLConnection(**db_config)
         cursor = conn.cursor()
-        query = "SELECT stock_symbol, quantity FROM TRADES WHERE username = %s"
+        query = "SELECT stock_symbol FROM TRADES WHERE username = %s"
         cursor.execute(query,(user.username,))
         result = cursor.fetchall()
-        for i in range(0,len(result)):
-            owned += result[i][0]
-        
+        symbols = set()
+        # print(result)
+        for item in result:
+            symbols.add(item[0])
+        # print(symbols)
+        portfolio = []
+        for item in symbols:
+            dict = {}
+            query = "SELECT quantity FROM TRADES WHERE username = %s AND stock_symbol = %s"
+            cursor.execute(query,(user.username,item))
+            result_qty = cursor.fetchall()
+            # print(resultq)
+            qty=0
+            for stock in result_qty:
+                # print(q[0])
+                qty+=stock[0]
+            dict['symbol']=item
+            query = 'SELECT company_name FROM STOCKS WHERE symbol = %s'
+            cursor.execute(query,(dict['symbol'],))
+            name = cursor.fetchone()
+            dict['company_name'] = name[0]
+            dict['quantity']=qty
+            portfolio.append(dict)
+        return portfolio
+                

@@ -87,3 +87,16 @@ def stock_quantity(Stock, user):
     '''.format(user.balance, Stock.name, Stock.symbol, Stock.price, Stock.currency))
     quantity = int(input("Enter the amount of stock you want to trade : ")) 
     return quantity
+
+def view_portfolio(user, portfolio):
+    print('''
+    Username\t: {}
+    Avaiable Balance\t: {}
+    Stocks in Portfolio\t:
+    '''.format(user.username,user.balance))
+    for item in portfolio:
+        print('''
+        Company Name\t: {}
+        Stock symbol\t: {}
+        Quantity Owned\t: {}
+        '''.format(item['company_name'], item['symbol'], item['quantity']))
