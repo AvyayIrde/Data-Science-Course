@@ -125,14 +125,17 @@ class stock:
         db_config = read_db_config()
         conn = MySQLConnection(**db_config)
         cursor = conn.cursor()
-        data = API_call("SYMBOL_SEARCH",keyword)
-        price = API_call("GLOBAL_QUOTE",data['bestMatches'][0]['1. symbol'])
-        Stock = cls(data['bestMatches'][0]['2. name'], 
+        try:
+            data = API_call("SYMBOL_SEARCH",keyword)
+            price = API_call("GLOBAL_QUOTE",data['bestMatches'][0]['1. symbol'])
+            Stock = cls(data['bestMatches'][0]['2. name'], 
                     data['bestMatches'][0]['1. symbol'], 
                     data['bestMatches'][0]['7. timezone'], 
                     data['bestMatches'][0]['8. currency'],
                     data['bestMatches'][0]['4. region'],
                     price['Global Quote']['05. price'])
+        except:
+            return False, None
         query = "SELECT * FROM STOCKS WHERE symbol LIKE %s"
         # cursor.execute(query, data['bestMatches'][0]['1. symbol'],)
         cursor.execute(query, (Stock.symbol,))
@@ -145,7 +148,7 @@ class stock:
             cursor.execute(query, (Stock.name, Stock.symbol, Stock.timezone, Stock.currency, float(Stock.price), Stock.region))
         conn.commit()
         conn.close()
-        return Stock
+        return True, Stock
 
 class trades:
     def __init__(self, user, Stock, quantity):

@@ -37,7 +37,7 @@ def operation_failed(username=None):
     if username is not None:
         print('Username: "{}" alerady Exists\nTry again!'.format(username))
     else:
-        print('Operation failed!\nTry again using different username and password')
+        print('Operation failed!')
 
 def login():
     username = input('Enter your username\t: ')
@@ -92,8 +92,9 @@ def view_portfolio(user, portfolio):
     print('''
     Username\t: {}
     Avaiable Balance\t: {}
+    Profit/Loss\t: {}
     Stocks in Portfolio\t:
-    '''.format(user.username,user.balance))
+    '''.format(user.username,user.balance,int(user.balance-100000)))
     for item in portfolio:
         print('''
         Company Name\t: {}

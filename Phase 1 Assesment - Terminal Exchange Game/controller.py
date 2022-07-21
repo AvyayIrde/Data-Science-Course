@@ -64,26 +64,37 @@ def transactions(user):
         choice = v.transactions_menu()
         if choice == '1':
             keyword = v.search_stock()
-            Stock = m.stock.search_stock(keyword)
-            v.stock_info(Stock)
+            status, Stock = m.stock.search_stock(keyword)
+            if status:
+                v.stock_info(Stock)
+            else:
+                v.operation_failed()
         elif choice == '2':
             symbol = v.trade_stock()
-            Stock = m.stock.search_stock(symbol)
-            quantity = v.stock_quantity(Stock, user)
-            trade = m.trades(user, Stock, quantity)
-            status = trade.trade_stock(action = 'buy')
+            status, Stock = m.stock.search_stock(symbol)
             if status:
-                v.operation_successsfull()
+                status = False
+                quantity = v.stock_quantity(Stock, user)
+                trade = m.trades(user, Stock, quantity)
+                status = trade.trade_stock(action = 'buy')
+                if status:
+                    v.operation_successsfull()
+                else:
+                    v.operation_failed()
             else:
                 v.operation_failed()
         elif choice == '3':
             symbol = v.trade_stock()
-            Stock = m.stock.search_stock(symbol)
-            quantity = v.stock_quantity(Stock, user)
-            trade = m.trades(user, Stock, quantity)
-            status = trade.trade_stock(action = 'sell')
+            status, Stock = m.stock.search_stock(symbol)
             if status:
-                v.operation_successsfull()
+                status = False
+                quantity = v.stock_quantity(Stock, user)
+                trade = m.trades(user, Stock, quantity)
+                status = trade.trade_stock(action = 'sell')
+                if status:
+                    v.operation_successsfull()
+                else:
+                    v.operation_failed()
             else:
                 v.operation_failed()
         elif choice == '4':
