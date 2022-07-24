@@ -23,6 +23,7 @@ def onboard():
     4. Or type secert code to enter admin menu
     '''
     v.clear()
+    status=False
     choice = None
     while choice !='3':
         choice = v.onboard()
@@ -41,7 +42,6 @@ def onboard():
             v.operation_successsfull()
             onboard()
         elif choice == '2':
-            status = False
             username,password = v.login()
             status, user = m.account.login(username, password)
             if status:
