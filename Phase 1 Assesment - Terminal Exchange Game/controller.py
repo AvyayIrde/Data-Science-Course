@@ -22,9 +22,11 @@ def onboard():
     3. Exit
     4. Or type secert code to enter admin menu
     '''
+    v.clear()
     choice = None
     while choice !='3':
         choice = v.onboard()
+        v.clear()
         if choice == '1':
             status, username, password = v.create_account()
             if status:
@@ -40,12 +42,15 @@ def onboard():
             onboard()
         elif choice == '2':
             status = False
-            while True:
-                username,password = v.login()
-                status, user = m.account.login(username, password)
-                if status:
-                    v.operation_successsfull(username)
-                    transactions(user)
+            username,password = v.login()
+            status, user = m.account.login(username, password)
+            if status:
+                v.clear()
+                v.operation_successsfull(username)
+                transactions(user)
+            else:
+                v.operation_failed()
+                continue
         elif choice == '3':
             exit()
         elif choice == '725969':
@@ -65,6 +70,7 @@ def transactions(user):
     status = False
     while choice != '5':
         choice = v.transactions_menu()
+        v.clear()
         if choice == '1':
             keyword = v.search_stock()
             status, Stock = m.stock.search_stock(keyword)
@@ -118,6 +124,7 @@ def admin():
     choice = None
     while choice != '4':
         choice = v.admin_menu()
+        v.clear()
         if choice == '1':
             users = m.account.get_users()
             v.view_users(users)

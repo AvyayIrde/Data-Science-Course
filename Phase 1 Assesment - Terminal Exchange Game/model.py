@@ -83,6 +83,8 @@ class account:
         if result is not None:
             if bcrypt.checkpw(password.encode('utf-8'), result[1].encode('utf-8')): #bcrypt.checkpw(password.encode('utf8'), password_hash.encode('utf8'))
                 return True, cls(result[0], result[1], result[2])
+            else:
+                return False, None
         else:
             return False, None
     @staticmethod

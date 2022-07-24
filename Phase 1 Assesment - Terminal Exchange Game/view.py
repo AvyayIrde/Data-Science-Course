@@ -2,6 +2,10 @@ from locale import currency
 import stdiomask
 import pandas as pd
 from tabulate import tabulate
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def onboard():
     menu = '''
@@ -15,11 +19,12 @@ def onboard():
     return choice
 
 def create_account():
-    username = input('Hi user, Enter your username to create account\t: ')
+    print("Welcome new user")
+    username = input('Enter a username to create account\t: ')
     attempts = 0
     while(attempts != 5):
-        pass_in_1 = stdiomask.getpass(prompt='Enter your password\t\t: ')
-        pass_in_2 = stdiomask.getpass(prompt='Re-Enter your password\t\t: ')
+        pass_in_1 = stdiomask.getpass(prompt='Enter a password for the account\t: ')
+        pass_in_2 = stdiomask.getpass(prompt='Re-Enter the password\t\t\t: ')
         if pass_in_1 == pass_in_2:
             print('Passwords match')
             password =  pass_in_1
@@ -31,12 +36,14 @@ def create_account():
     return False, None, None
 
 def operation_successsfull(username=None):
+    clear()
     if username is not None:
         print('Login successful!\nWelcome {}'.format(username))
     else:
         print('Operation successful!')
 
 def operation_failed(username=None):
+    clear()
     if username is not None:
         print('Username: "{}" alerady Exists\nTry again!'.format(username))
     else:
