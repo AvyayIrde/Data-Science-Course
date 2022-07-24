@@ -1,5 +1,7 @@
 from locale import currency
 import stdiomask
+import pandas as pd
+from tabulate import tabulate
 
 def onboard():
     menu = '''
@@ -7,6 +9,7 @@ def onboard():
     1. Create Account
     2. Login
     3. Exit
+    Or type secert code to enter admin menu
     '''
     choice = input(menu)
     return choice
@@ -101,3 +104,30 @@ def view_portfolio(user, portfolio):
         Stock symbol\t: {}
         Quantity Owned\t: {}
         '''.format(item['company_name'], item['symbol'], item['quantity']))
+
+def admin_menu():
+    menu = '''
+    1. View all users
+    2. View all stocks in database
+    3. View all trades
+    4. Logout
+    '''
+    choice = input(menu)
+    return choice
+
+
+
+def view_users(users):
+    df = pd.DataFrame(users)
+    df.columns=['Username', 'Balance']
+    print(tabulate(df, headers='keys', tablefmt='pretty', stralign='left'))
+
+def view_stocks(stocks):
+    df = pd.DataFrame(stocks)
+    df.columns=['Company Name', 'Symbol', 'Timezone', 'Currency', 'Price', 'Region']
+    print(tabulate(df, headers='keys', tablefmt='pretty', stralign='left'))
+    
+def view_trades(trades):
+    df = pd.DataFrame(trades)
+    df.columns=['Index', 'Username', 'Company Symbol', 'Price', 'Quantity', 'Transaction Ammount', 'TimeStamp']
+    print(tabulate(df, headers='keys', tablefmt='pretty', stralign='left', showindex=False))

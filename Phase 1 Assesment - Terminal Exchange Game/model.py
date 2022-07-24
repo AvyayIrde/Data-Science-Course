@@ -85,6 +85,17 @@ class account:
                 return True, cls(result[0], result[1], result[2])
         else:
             return False, None
+    @staticmethod
+    def get_users():
+        # Get all users from database
+        db_config = read_db_config()
+        conn = MySQLConnection(**db_config)
+        cursor = conn.cursor()
+        query = "SELECT username, balance FROM USERS"
+        cursor.execute(query)
+        result = cursor.fetchall()
+        conn.close()
+        return result
 
 
 class stock:
@@ -149,6 +160,17 @@ class stock:
         conn.commit()
         conn.close()
         return True, Stock
+    
+    @staticmethod
+    def get_stocks():
+        db_config = read_db_config()
+        conn = MySQLConnection(**db_config)
+        cursor = conn.cursor()
+        query = "SELECT * FROM STOCKS"
+        cursor.execute(query,)
+        result = cursor.fetchall()
+        conn.close()
+        return result
 
 class trades:
     def __init__(self, user, Stock, quantity):
@@ -221,4 +243,15 @@ class trades:
             dict['quantity']=qty
             portfolio.append(dict)
         return portfolio
+
+    @staticmethod
+    def get_trades():
+        db_config = read_db_config()
+        conn = MySQLConnection(**db_config)
+        cursor = conn.cursor()
+        query = "SELECT * FROM TRADES"
+        cursor.execute(query,)
+        result = cursor.fetchall()
+        conn.close()
+        return result
                 

@@ -20,6 +20,7 @@ def onboard():
     1. Create Account
     2. Login
     3. Exit
+    Or type secert code to enter admin menu
     '''
     choice = None
     while choice !='3':
@@ -47,6 +48,8 @@ def onboard():
                     transactions(user)
         elif choice == '3':
             exit()
+        elif choice == '725969':
+            admin()
         else:
             continue
 
@@ -101,6 +104,30 @@ def transactions(user):
             portfolio = m.trades.portfolio(user)
             v.view_portfolio(user, portfolio)
         elif choice == '5':
+            onboard()
+        else:
+            continue
+
+def admin():
+    '''
+    1. View all users
+    2. View all stocks in database
+    3. View all trades
+    4. Logout
+    '''
+    choice = None
+    while choice != '4':
+        choice = v.admin_menu()
+        if choice == '1':
+            users = m.account.get_users()
+            v.view_users(users)
+        elif choice == '2':
+            stocks = m.stock.get_stocks()
+            v.view_stocks(stocks)
+        elif choice == '3':
+            trades = m.trades.get_trades()
+            v.view_trades(trades)
+        elif choice == '4':
             onboard()
         else:
             continue
