@@ -9,7 +9,7 @@ def onboard():
     1. Create Account
     2. Login
     3. Exit
-    Or type secert code to enter admin menu
+    4. Or type secert code to enter admin menu
     '''
     choice = input(menu)
     return choice
